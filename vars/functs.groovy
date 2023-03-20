@@ -9,7 +9,7 @@ def newBuild()
 
 def newDeployment(job,IP,appname)
 {
-  sh 'scp /var/lib/jenkins/workspace/${job}/webapp/target/webapp.war ubuntu@{IP}:/var/lib/tomcat9/webapps/{appname}.war'
+  sh 'scp /var/lib/jenkins/workspace/${job}/webapp/target/webapp.war ubuntu@{IP}:/var/lib/tomcat9/webapps/${appname}.war'
 }
 
 def newTesting(job,testfile)
