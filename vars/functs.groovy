@@ -17,8 +17,8 @@ def newTesting(job,testfile)
   sh "java -jar /var/lib/jenkins/workspace/${job}/${testfile}"
 }
 
-def newDelivery(submitter,job,IP,appname)
+def newDelivery(job,IP,appname)
 {
-  input message: 'Aprove this for Delivery', submitter: ${submitter}
+  input message: 'Aprove this for Delivery', submitter: 'akash'
   newDeployment(job,IP,appname)
 }
