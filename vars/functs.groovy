@@ -1,7 +1,7 @@
 def newDownload(repo)
 {
   git 'https://github.com/akashude/${repo}.git'
-{
+}
 def newBuild()
 {
   sh 'mvn package'
